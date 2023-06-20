@@ -7,22 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B13DCACF2A3B41FD00772FBE /* CoreDataKalangoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13DCACE2A3B41FD00772FBE /* CoreDataKalangoApp.swift */; };
-		B13DCAD12A3B41FD00772FBE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13DCAD02A3B41FD00772FBE /* ContentView.swift */; };
+		B1249B972A3D19CB00B5CD08 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1249B962A3D19CB00B5CD08 /* ListViewModel.swift */; };
+		B1249B992A3D1D4200B5CD08 /* AddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1249B982A3D1D4200B5CD08 /* AddViewModel.swift */; };
+		B1249B9B2A3D1F2200B5CD08 /* InfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1249B9A2A3D1F2200B5CD08 /* InfoViewModel.swift */; };
+		B1249B9D2A3D1FB900B5CD08 /* EditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1249B9C2A3D1FB900B5CD08 /* EditViewModel.swift */; };
+		B13DCACF2A3B41FD00772FBE /* CoreDataPetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13DCACE2A3B41FD00772FBE /* CoreDataPetApp.swift */; };
+		B13DCAD12A3B41FD00772FBE /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13DCAD02A3B41FD00772FBE /* ListView.swift */; };
 		B13DCAD32A3B41FE00772FBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B13DCAD22A3B41FE00772FBE /* Assets.xcassets */; };
 		B13DCAD62A3B41FE00772FBE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B13DCAD52A3B41FE00772FBE /* Preview Assets.xcassets */; };
-		B13DCAD82A3B41FE00772FBE /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13DCAD72A3B41FE00772FBE /* Persistence.swift */; };
-		B13DCADB2A3B41FE00772FBE /* CoreDataKalango.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B13DCAD92A3B41FE00772FBE /* CoreDataKalango.xcdatamodeld */; };
+		B13DCADB2A3B41FE00772FBE /* CoreDataPet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B13DCAD92A3B41FE00772FBE /* CoreDataPet.xcdatamodeld */; };
+		B13DCAE62A3B42ED00772FBE /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13DCAE52A3B42ED00772FBE /* Gender.swift */; };
+		B13DCAEB2A3B518000772FBE /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13DCAEA2A3B518000772FBE /* CoreDataManager.swift */; };
+		B15863BD2A3BC7B300EB851E /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15863BC2A3BC7B300EB851E /* ImagePicker.swift */; };
+		B15863BF2A3BD3B300EB851E /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15863BE2A3BD3B300EB851E /* AddView.swift */; };
+		B160ED5F2A3CBDEB008AC668 /* Specie.swift in Sources */ = {isa = PBXBuildFile; fileRef = B160ED5E2A3CBDEB008AC668 /* Specie.swift */; };
+		B160ED622A3CBE17008AC668 /* Pet+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B160ED602A3CBE17008AC668 /* Pet+CoreDataClass.swift */; };
+		B160ED632A3CBE17008AC668 /* Pet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B160ED612A3CBE17008AC668 /* Pet+CoreDataProperties.swift */; };
+		B160ED662A3CEF5D008AC668 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B160ED652A3CEF5D008AC668 /* InfoView.swift */; };
+		B160ED682A3CF0ED008AC668 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B160ED672A3CF0ED008AC668 /* EditView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B1249B962A3D19CB00B5CD08 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		B1249B982A3D1D4200B5CD08 /* AddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewModel.swift; sourceTree = "<group>"; };
+		B1249B9A2A3D1F2200B5CD08 /* InfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewModel.swift; sourceTree = "<group>"; };
+		B1249B9C2A3D1FB900B5CD08 /* EditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewModel.swift; sourceTree = "<group>"; };
 		B13DCACB2A3B41FD00772FBE /* CoreDataKalango.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataKalango.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B13DCACE2A3B41FD00772FBE /* CoreDataKalangoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataKalangoApp.swift; sourceTree = "<group>"; };
-		B13DCAD02A3B41FD00772FBE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B13DCACE2A3B41FD00772FBE /* CoreDataPetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPetApp.swift; sourceTree = "<group>"; };
+		B13DCAD02A3B41FD00772FBE /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		B13DCAD22A3B41FE00772FBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B13DCAD52A3B41FE00772FBE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B13DCAD72A3B41FE00772FBE /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		B13DCADA2A3B41FE00772FBE /* CoreDataKalango.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataKalango.xcdatamodel; sourceTree = "<group>"; };
+		B13DCAE52A3B42ED00772FBE /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
+		B13DCAEA2A3B518000772FBE /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		B15863BC2A3BC7B300EB851E /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		B15863BE2A3BD3B300EB851E /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		B160ED5E2A3CBDEB008AC668 /* Specie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Specie.swift; sourceTree = "<group>"; };
+		B160ED602A3CBE17008AC668 /* Pet+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pet+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B160ED612A3CBE17008AC668 /* Pet+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pet+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B160ED652A3CEF5D008AC668 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		B160ED672A3CF0ED008AC668 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,10 +60,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B1249B952A3D19B600B5CD08 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B1249B962A3D19CB00B5CD08 /* ListViewModel.swift */,
+				B1249B982A3D1D4200B5CD08 /* AddViewModel.swift */,
+				B1249B9C2A3D1FB900B5CD08 /* EditViewModel.swift */,
+				B1249B9A2A3D1F2200B5CD08 /* InfoViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		B13DCAC22A3B41FD00772FBE = {
 			isa = PBXGroup;
 			children = (
-				B13DCACD2A3B41FD00772FBE /* CoreDataKalango */,
+				B13DCACD2A3B41FD00772FBE /* CoreDataPet */,
 				B13DCACC2A3B41FD00772FBE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,17 +87,20 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B13DCACD2A3B41FD00772FBE /* CoreDataKalango */ = {
+		B13DCACD2A3B41FD00772FBE /* CoreDataPet */ = {
 			isa = PBXGroup;
 			children = (
-				B13DCACE2A3B41FD00772FBE /* CoreDataKalangoApp.swift */,
-				B13DCAD02A3B41FD00772FBE /* ContentView.swift */,
-				B13DCAD22A3B41FE00772FBE /* Assets.xcassets */,
-				B13DCAD72A3B41FE00772FBE /* Persistence.swift */,
-				B13DCAD92A3B41FE00772FBE /* CoreDataKalango.xcdatamodeld */,
+				B15863BA2A3BC77F00EB851E /* Resources */,
+				B1249B952A3D19B600B5CD08 /* ViewModels */,
+				B15863B92A3BC76D00EB851E /* Views */,
+				B13DCAE92A3B516D00772FBE /* Manager */,
+				B13DCAE82A3B433500772FBE /* Entities */,
+				B13DCAE72A3B431D00772FBE /* Models */,
+				B13DCACE2A3B41FD00772FBE /* CoreDataPetApp.swift */,
+				B13DCAD92A3B41FE00772FBE /* CoreDataPet.xcdatamodeld */,
 				B13DCAD42A3B41FE00772FBE /* Preview Content */,
 			);
-			path = CoreDataKalango;
+			path = CoreDataPet;
 			sourceTree = "<group>";
 		};
 		B13DCAD42A3B41FE00772FBE /* Preview Content */ = {
@@ -71,6 +109,60 @@
 				B13DCAD52A3B41FE00772FBE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B13DCAE72A3B431D00772FBE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B160ED602A3CBE17008AC668 /* Pet+CoreDataClass.swift */,
+				B160ED612A3CBE17008AC668 /* Pet+CoreDataProperties.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B13DCAE82A3B433500772FBE /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				B13DCAE52A3B42ED00772FBE /* Gender.swift */,
+				B160ED5E2A3CBDEB008AC668 /* Specie.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		B13DCAE92A3B516D00772FBE /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				B13DCAEA2A3B518000772FBE /* CoreDataManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		B15863B92A3BC76D00EB851E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B15863BB2A3BC7A500EB851E /* Shared */,
+				B13DCAD02A3B41FD00772FBE /* ListView.swift */,
+				B15863BE2A3BD3B300EB851E /* AddView.swift */,
+				B160ED652A3CEF5D008AC668 /* InfoView.swift */,
+				B160ED672A3CF0ED008AC668 /* EditView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B15863BA2A3BC77F00EB851E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B13DCAD22A3B41FE00772FBE /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B15863BB2A3BC7A500EB851E /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				B15863BC2A3BC7B300EB851E /* ImagePicker.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,7 +200,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B13DCAC62A3B41FD00772FBE /* Build configuration list for PBXProject "CoreDataKalango" */;
+			buildConfigurationList = B13DCAC62A3B41FD00772FBE /* Build configuration list for PBXProject "CoreDataPet" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -143,10 +235,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B13DCADB2A3B41FE00772FBE /* CoreDataKalango.xcdatamodeld in Sources */,
-				B13DCAD82A3B41FE00772FBE /* Persistence.swift in Sources */,
-				B13DCAD12A3B41FD00772FBE /* ContentView.swift in Sources */,
-				B13DCACF2A3B41FD00772FBE /* CoreDataKalangoApp.swift in Sources */,
+				B1249B9D2A3D1FB900B5CD08 /* EditViewModel.swift in Sources */,
+				B13DCADB2A3B41FE00772FBE /* CoreDataPet.xcdatamodeld in Sources */,
+				B160ED632A3CBE17008AC668 /* Pet+CoreDataProperties.swift in Sources */,
+				B1249B992A3D1D4200B5CD08 /* AddViewModel.swift in Sources */,
+				B15863BD2A3BC7B300EB851E /* ImagePicker.swift in Sources */,
+				B160ED662A3CEF5D008AC668 /* InfoView.swift in Sources */,
+				B1249B9B2A3D1F2200B5CD08 /* InfoViewModel.swift in Sources */,
+				B13DCAD12A3B41FD00772FBE /* ListView.swift in Sources */,
+				B13DCACF2A3B41FD00772FBE /* CoreDataPetApp.swift in Sources */,
+				B160ED682A3CF0ED008AC668 /* EditView.swift in Sources */,
+				B13DCAEB2A3B518000772FBE /* CoreDataManager.swift in Sources */,
+				B160ED5F2A3CBDEB008AC668 /* Specie.swift in Sources */,
+				B1249B972A3D19CB00B5CD08 /* ListViewModel.swift in Sources */,
+				B15863BF2A3BD3B300EB851E /* AddView.swift in Sources */,
+				B13DCAE62A3B42ED00772FBE /* Gender.swift in Sources */,
+				B160ED622A3CBE17008AC668 /* Pet+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,7 +378,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CoreDataKalango/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CoreDataPet/Preview Content\"";
 				DEVELOPMENT_TEAM = DUY76YA587;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -303,7 +407,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CoreDataKalango/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CoreDataPet/Preview Content\"";
 				DEVELOPMENT_TEAM = DUY76YA587;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -328,7 +432,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B13DCAC62A3B41FD00772FBE /* Build configuration list for PBXProject "CoreDataKalango" */ = {
+		B13DCAC62A3B41FD00772FBE /* Build configuration list for PBXProject "CoreDataPet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B13DCADC2A3B41FE00772FBE /* Debug */,
@@ -349,13 +453,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		B13DCAD92A3B41FE00772FBE /* CoreDataKalango.xcdatamodeld */ = {
+		B13DCAD92A3B41FE00772FBE /* CoreDataPet.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				B13DCADA2A3B41FE00772FBE /* CoreDataKalango.xcdatamodel */,
 			);
 			currentVersion = B13DCADA2A3B41FE00772FBE /* CoreDataKalango.xcdatamodel */;
-			path = CoreDataKalango.xcdatamodeld;
+			path = CoreDataPet.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
