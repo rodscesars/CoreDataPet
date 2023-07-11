@@ -25,6 +25,7 @@ extension Pet {
     @NSManaged public var birthDate: Date?
     @NSManaged public var weight: Double
     @NSManaged public var isNeutered: Bool
+    @NSManaged public var task: NSSet?
     
     var breed: String {
         get {
@@ -52,6 +53,22 @@ extension Pet {
             specieValue = newValue.rawValue
         }
     }
+
+}
+
+extension Pet {
+
+    @objc(addTaskObject:)
+    @NSManaged public func addToTask(_ value: PetTask)
+
+    @objc(removeTaskObject:)
+    @NSManaged public func removeFromTask(_ value: PetTask)
+
+    @objc(addTask:)
+    @NSManaged public func addToTask(_ values: NSSet)
+
+    @objc(removeTask:)
+    @NSManaged public func removeFromTask(_ values: NSSet)
 
 }
 

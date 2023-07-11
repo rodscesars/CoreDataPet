@@ -27,31 +27,31 @@ class CoreDataManager {
         container.viewContext.automaticallyMergesChangesFromParent = true
     }
         
-    let request: NSFetchRequest<Pet> = Pet.fetchRequest()
+    let petRequest: NSFetchRequest<Pet> = Pet.fetchRequest()
+    let taskRequest: NSFetchRequest<PetTask> = PetTask.fetchRequest()
     
-    func fetchAll() -> [Pet] {
+    func saveData() {
+        do {
+            try self.container.viewContext.save()
+        } catch let error as NSError {
+            print("\(error): Não foi possível editar o Pet")
+        }
+    }
+    
+    //PETS
+    
+    func fetchAllPets() -> [Pet] {
         var pets = [Pet]()
         do {
-            let fetchedPets = try self.container.viewContext.fetch(request)
+            let fetchedPets = try self.container.viewContext.fetch(petRequest)
             pets = fetchedPets
         } catch let error as NSError {
             print("\(error): Ocorreu um erro na busca de Pets")
         }
         return pets
     }
-    
-//    func fetchById(id: UUID) -> Pet? {
-//        var pets = [Pet]()
-//        request.predicate = NSPredicate(format: "id == %@", id as CVarArg)
-//        do {
-//            pets = try self.container.viewContext.fetch(request)
-//        } catch let error as NSError {
-//            print("\(error): O pet não foi encontrado!")
-//        }
-//        return pets.first
-//    }
-    
-    func create(name: String, image: Data, gender: Gender, specie: Specie, breed: String, birthDate: Date, weight: Double, isNeutered: Bool) {
+        
+    func createPet(name: String, image: Data, gender: Gender, specie: Specie, breed: String, birthDate: Date, weight: Double, isNeutered: Bool) {
         let newPet = Pet(context: self.container.viewContext)
         newPet.id = UUID()
         newPet.name = name
@@ -65,16 +65,40 @@ class CoreDataManager {
         saveData()
     }
     
-    func saveData() {
-        do {
-            try self.container.viewContext.save()
-        } catch let error as NSError {
-            print("\(error): Não foi possível editar o Pet")
-        }
+    func deletePet(pet: Pet) {
+            self.container.viewContext.delete(pet)
+            saveData()
     }
     
-    func delete(pet: Pet) {
-            self.container.viewContext.delete(pet)
+    //TASKS
+    
+    func fetchAllTasks() -> [PetTask] {
+        var tasks = [PetTask]()
+        do {
+            let fetchedTasks = try self.container.viewContext.fetch(taskRequest)
+            tasks = fetchedTasks
+        } catch let error as NSError {
+            print("\(error): Ocorreu um erro na busca de Taredas")
+        }
+        return tasks
+    }
+    
+    func createTask(title: String, type: TaskType, pet: Pet, replay: Replay, reminder: Reminder, date: Date, time: Date, summary: String) {
+        let newTask = PetTask(context: self.container.viewContext)
+        newTask.id = UUID()
+        newTask.title = title
+        newTask.type = type
+        newTask.replay = replay
+        newTask.reminder = reminder
+        newTask.date = date
+        newTask.time = time
+        newTask.summary = summary
+        newTask.pet = pet
+        saveData()
+    }
+    
+    func deleteTask(task: PetTask) {
+            self.container.viewContext.delete(task)
             saveData()
     }
 }

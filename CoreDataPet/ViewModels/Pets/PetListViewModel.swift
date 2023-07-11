@@ -7,16 +7,16 @@
 
 import Foundation
 
-class ListViewModel: ObservableObject {
+class PetListViewModel: ObservableObject {
     
     @Published var pets = [Pet]()
         
     func fetchAllPets() {
-        pets = CoreDataManager.shared.fetchAll()
+        pets = CoreDataManager.shared.fetchAllPets()
     }
     
     func deletePet(pet: Pet) {
-        CoreDataManager.shared.delete(pet: pet)
+        CoreDataManager.shared.deletePet(pet: pet)
         fetchAllPets()
     }
 }

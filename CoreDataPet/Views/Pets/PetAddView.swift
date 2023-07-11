@@ -7,27 +7,20 @@
 
 import SwiftUI
 
-struct AddView: View {
+struct PetAddView: View {
     @Environment(\.presentationMode) var presentationMode
-    @StateObject var addViewModel = AddViewModel()
+    @StateObject var addViewModel = PetAddViewModel()
 
-    @State var showImagePicker = false
     @State private var showAlert = false
+    
+    var isSaveButtonEnabled: Bool {
+        return addViewModel.name != ""
+    }
        
     var body: some View {
         VStack {
-            if addViewModel.selectedImage.count != 0  {
-                Image(uiImage: UIImage(data: addViewModel.selectedImage) ?? UIImage()).renderingMode(.original).resizable().frame(width: 150, height: 150)
-            } else {
-                Image(systemName: "photo.fill").font(.system(size: 55))
-            }
-            
-            Button {
-                showImagePicker.toggle()
-            } label: {
-                Text("Selecionar imagem")
-            }.padding()
-            
+            PhotoSelector(imageData: $addViewModel.selectedImage)
+                
             Form {
                 Section("Adicionar PET") {
                     TextField("Nome", text: $addViewModel.name)
@@ -59,26 +52,31 @@ struct AddView: View {
                     }
                 }
                 
-                Button("Enviar") {
+            }
+        }
+        .toolbar(content: {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button("Adicionar") {
                     addViewModel.createPet()
                     showAlert = true
                 }
+                .disabled(!isSaveButtonEnabled)
             }
-        }.alert("Sucesso!", isPresented: $showAlert) {
+        })
+        .alert("Sucesso!", isPresented: $showAlert) {
             Button("Ok") {
                 self.presentationMode.wrappedValue.dismiss()
             }
         } message: {
             Text("Pet salvo com sucesso!")
         }
-        .sheet(isPresented: $showImagePicker) {
-            ImagePicker(selectedImage: $addViewModel.selectedImage)
-        }
+        .navigationTitle("Adicionar Pet")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
-struct AddView_Previews: PreviewProvider {
+struct PetAddView_Previews: PreviewProvider {
     static var previews: some View {
-        AddView()
+        PetAddView()
     }
 }

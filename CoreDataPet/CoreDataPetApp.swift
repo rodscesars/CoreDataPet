@@ -12,7 +12,7 @@ struct CoreDataPetApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ListView()
+            ContentView()
         }
     }
 }
