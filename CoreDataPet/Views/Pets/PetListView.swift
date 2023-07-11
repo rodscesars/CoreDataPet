@@ -36,6 +36,9 @@ struct PetListView: View {
                                 
                                 Text(pet.name)
                             }
+                            .alignmentGuide(.listRowSeparatorLeading) { d in
+                                d[.leading]
+                            }
                         }
                     }
                     .onDelete { IndexSet in
@@ -46,7 +49,7 @@ struct PetListView: View {
                     }
                 }
             }
-
+            
             .navigationBarTitle("Pets")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar(content: {
