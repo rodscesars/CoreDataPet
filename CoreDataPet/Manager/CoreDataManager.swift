@@ -34,7 +34,7 @@ class CoreDataManager {
         do {
             try self.container.viewContext.save()
         } catch let error as NSError {
-            print("\(error): Não foi possível editar o Pet")
+            print("\(error): Não foi possível salvar os dados")
         }
     }
     
