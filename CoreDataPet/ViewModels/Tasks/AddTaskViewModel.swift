@@ -18,6 +18,7 @@ class AddTaskViewModel: ObservableObject {
     @Published var reminder: Reminder = .none
     @Published var selectedDate: Date? = Date()
     @Published var selectedTime: Date? = Date()
+    @Published var isDone: Bool = false
     @Published var selectedPet: Pet?
     
     init() {
@@ -29,7 +30,7 @@ class AddTaskViewModel: ObservableObject {
     }
     
     func createTask() {
-        CoreDataManager.shared.createTask(title: title, type: type, pet: selectedPet ?? Pet(context: CoreDataManager.shared.container.viewContext), replay: replay, reminder: reminder, date: selectedDate ?? .now, time: selectedTime ?? .now, summary: summary)
+        CoreDataManager.shared.createTask(title: title, type: type, pet: selectedPet ?? Pet(context: CoreDataManager.shared.container.viewContext), replay: replay, reminder: reminder, date: selectedDate ?? .now, time: selectedTime ?? .now, summary: summary, isDone: isDone)
         _ = CoreDataManager.shared.fetchAllTasks()
     }
     

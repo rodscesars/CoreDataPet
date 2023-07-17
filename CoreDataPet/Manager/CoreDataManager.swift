@@ -83,7 +83,7 @@ class CoreDataManager {
         return tasks
     }
     
-    func createTask(title: String, type: TaskType, pet: Pet, replay: Replay, reminder: Reminder, date: Date, time: Date, summary: String) {
+    func createTask(title: String, type: TaskType, pet: Pet, replay: Replay, reminder: Reminder, date: Date, time: Date, summary: String, isDone: Bool) {
         let newTask = PetTask(context: self.container.viewContext)
         newTask.id = UUID()
         newTask.title = title
@@ -93,6 +93,7 @@ class CoreDataManager {
         newTask.date = date
         newTask.time = time
         newTask.summary = summary
+        newTask.isDone = isDone
         newTask.pet = pet
         saveData()
     }

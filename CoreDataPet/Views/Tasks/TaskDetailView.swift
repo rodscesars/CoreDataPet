@@ -49,7 +49,7 @@ struct TaskDetailView: View {
             HStack {
                 Spacer()
                 Button("Marcar como concluída") {
-                    print("Marcado")
+                    detailViewModel.task.isDone.toggle()
                 }
                 .font(.system(size: 16, weight: .semibold))
                 .padding(.vertical, 15.0)

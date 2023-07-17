@@ -24,6 +24,7 @@ extension PetTask {
     @NSManaged public var summaryValue: String?
     @NSManaged public var typeValue: String?
     @NSManaged public var title: String
+    @NSManaged public var isDone: Bool
     @NSManaged public var pet: Pet?
     
     var summary: String {
